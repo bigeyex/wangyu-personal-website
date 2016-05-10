@@ -1,0 +1,158 @@
+@media (max-width: 990px){
+    .block{
+        max-width: 650px;
+    }
+}
+
+
+@media (max-width: 900px){
+    .hero{
+        background-image: none;
+    }
+
+}
+
+@media (max-width: 659px){
+}
+
+@media (max-width: 630px){
+    header.open{
+        height: 350px;
+        .transition-duration(0.3s);
+        transition-property: height;
+    }
+
+    header.closed{
+        .transition-duration(0.3s);
+        transition-property: height;
+    }
+
+    header {
+        background-color: @header-black;
+        padding: 16px 16px 0;
+        height: 40px;
+        overflow: hidden;
+
+        nav{
+            display: block;
+            margin: 20px 0 0;
+
+            li{
+                display: block;
+
+                a{
+                    display: block;
+                    padding: 20px 0;
+                }
+            }
+        }
+
+        .navicon-wrapper{
+          display: block;
+          position: absolute;
+          top: 0;
+          right: 0;
+
+          padding: 26px 50px;
+          transition: 0.25s;
+          cursor: pointer;
+          -webkit-user-select: none;
+          opacity: .8;
+        }
+        
+        .navicon{
+          display: block;
+          position: relative;
+          width: 2.1em;
+          height: .25rem;
+          background: #E7E6DD;
+          transition: 0.25s;
+          border-radius: 2.5rem;
+        }
+
+        .navicon:before {
+          top: .625rem;
+        }
+        .navicon:after {
+          top: -.625rem;
+        }
+
+        .navicon:before, .navicon:after {
+          display: block;
+          content: "";
+          height: .25rem;
+          width: 2.1rem;
+          background: #E7E6DD;
+          position: absolute;
+          z-index: -1;
+          transition: 0.25s 0.125s;
+          border-radius: 1rem;
+        }
+
+        .navicon-wrapper.open{
+            .navicon {
+                background: transparent;
+
+                &:before { 
+                    transform: rotate(-45deg);  
+                    top: 0;
+                }
+                &:after { 
+                    transform: rotate(45deg); 
+                    top: 0;
+                }
+            }
+        }
+    }
+
+    .hero{
+        height: 560px;
+
+        .introduction{
+            padding: 70px 25px;
+        }
+
+        .buttons{
+            bottom: 15px;
+            left: 20px;
+
+            li{
+                width: 45px;
+                height: 45px;
+                margin-right: 10px;
+                border: none;
+            }
+        }
+    }
+
+    .myworks{
+        ul{
+            margin-left: 0;
+            text-align: center;
+        }
+
+        li{
+            margin-left: 0;
+            a,p{
+                text-align: left;
+            }
+        }
+    }
+
+    #dialogContentFrame{
+        height: 90%;
+        overflow-y: auto;
+        .content-right, .content-left{
+            position: static;
+            margin-top: 20px;
+        }
+    }
+
+    .myskills .skills-container .course-set span{
+        display: none;
+    }
+
+    .myskills h3{
+        margin: 18px 0 0;
+    }
+}
